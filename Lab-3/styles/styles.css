@@ -1,0 +1,18 @@
+i, em, span, b, strong {
+    color: green;
+    text-decoration: underline;
+}
+
+ol, ul {
+    border: 1px solid lightcoral;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
