@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Моя перша HTML-форма</title>
+  </head>
+  <body>
+    <h1>Моя перша HTML-форма</h1>
+    <form 
+          action="https://httpbin.org/get"
+          method="GET">
+      <label for="firstname">Ім'я:</label>
+      <input type="text" id="firstname" name="first_name">
+      <br>
+      <label>Дата народження:</label>
+      <input type="date" name="date">
+      <br>
+      <label>Email:</label>
+      <input type="email" name="email">
+      <br>
+      <label>Повідомлення:</label>
+      <input type="text" name="message">
+      <br>
+      <label>Ваші улюблені напої?</label> <br>
+      <input type="checkbox" name="drink"> Вода <br>
+      <input type="checkbox" name="drink"> Чай <br>
+      <input type="checkbox" name="drink"> Кава <br>
+      <input type="checkbox" name="drink"> Сік <br>
+      <label>Ваша національність?</label> <br>
+      <input type="radio" name="nationality"> Українець/українка <br>
+      <input type="radio" name="nationality"> American <br>
+      <input type="radio" name="nationality"> British <br>
+      <input type="submit" value="Відправити">
+      <input type="reset" value="Очистити">
+    </form>
+    <picture>
+      <source 
+              media="(min-width: 468px)"
+              srcset="https://picsum.photos/1000/400">
+      <img src="https://picsum.photos/300/500">
+    </picture>
+  </body>
+</html>
