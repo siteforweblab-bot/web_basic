@@ -1,0 +1,887 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*body*/
+body{
+    font-family: 'Noto Serif Display';
+    background-color: #5a699f;
+    color: white;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/*header*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 0 20px; 
+    z-index: 20;
+}
+.logo_img{
+    height: 50px;
+    width: auto;
+    margin-right: 5px;
+}
+.search_bar{
+    flex-grow: 1;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+.search_input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Noto Serif Display';
+    font-size: 14px;
+    color: #8392c8;
+}
+.search_icon{
+    height: 25px;
+    width: auto;
+}
+.setting_icon{
+    height: 25px;
+    width: 25px;
+}
+/*navigation*/
+.header_nav{
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    height: 100%; 
+}
+
+.nav_link{
+    position: relative;
+    color: #5a699f;
+    font-weight: bold;
+    padding: 15px 0; 
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 0.2s;
+    font-size: 0.9rem;
+}
+.nav_link:hover {
+    color: #3f51b5; 
+}
+.dropdown_container {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    height: 100%; 
+}
+
+.dropdown_menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: auto; 
+    transform: translateX(-80%);
+
+    width: 100%; 
+    min-width: 250px; 
+    
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 15px 10px; 
+    z-index: 10; 
+    border-radius: 6px;
+    border-top: 3px solid #8392c8;
+    
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); 
+    gap: 10px 10px;
+}
+
+.fundraisers_menu {
+   min-width: 600px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px 20px;
+}
+
+.settings_menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 10px 0px;
+    gap: 5px;
+}
+
+.dropdown_item {
+    display: block;
+    color: #5a699f; 
+    font-weight: 500; 
+    font-size: 15px;
+    padding: 5px 20px;
+    white-space: nowrap; 
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+.dropdown_item:hover {
+    color: white;
+    background-color: #8392c8;
+}
+.dropdown_container:hover .dropdown_menu {
+    display: grid;
+}
+.dropdown_container:hover .settings_menu {
+    display: flex;
+}
+.section_title_container{
+    display: inline-block;
+    background-color: white;
+    color: #5a699f;
+    font-weight: bold;
+    font-size: 20px;
+    width: 160px;
+    height: 50px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    z-index: 5; 
+    margin-top: 110px;
+    margin-left: 70px;
+}
+/*book card*/
+.card-wrapper {
+    padding: 20px;
+}
+.book_card {
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    height: 240px;
+    width: 300px;
+    float: left;
+    margin: 20px 50px 40px 50px;
+}
+.book_img{
+    position: absolute;
+    top:40px;
+    left: 82px;
+    height: 160px;
+    width: 130px;
+    z-index: 10;
+}
+.book_info{
+    position: absolute;
+    background-color: #8392c8;
+    width: 300px;
+    height: 72px;
+    border-radius: 0 0 10px 10px;
+    z-index: 15;
+    bottom: 0;
+}
+.book_name{
+    position: absolute;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 21px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.book_cost{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    padding-top: 21px;
+    padding-left: 205px;
+    font-size: 18px;
+}
+footer{
+    position: absolute;
+    background-color: #485b9c;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    bottom: -250px;
+    z-index: -10;
+}
+/*about book card*/
+.about_book{
+    position:relative;
+    background-color: white;
+    height: 480px;
+    width: 440px;
+    color: #5a699f;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.about_book_im{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 160px;
+    width: 130px;
+}
+.h1_about_book{
+position: absolute;
+    top: 20px;
+    left: 180px;
+}
+.author_about_book{
+position: absolute;
+    top: 70px;
+    left: 180px;
+}
+.genre_about_book{
+position: absolute;
+    top: 100px;
+    left: 180px;
+}
+.fundraisers_about_book{
+position: absolute;
+    top: 130px;
+    left: 180px;
+}
+.plot_about_book{
+position: absolute;
+    top: 190px;
+    left: 20px;
+}
+.plot_text_about_book{
+position: absolute;
+    top: 235px;
+    left: 20px;
+    width: 400px;
+    text-align: justify;
+}
+.button_about_book{
+position: absolute;
+    top: 435px;
+    left: 312px;
+    background-color: white;
+    height: 30px;
+    width: 90px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+    color: #5a699f;
+    font-family: 'Noto Serif Display';
+}
+.cost_about_book{
+position: absolute;
+    top: 160px;
+    left: 180px;
+    font-weight: bold;
+}
+/*login*/
+.login_form{
+    position:relative;
+    background-color: white;
+    height: 500px;
+    width: 800px;
+    color: #5a699f;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.login_img{
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    border-radius: 20px 0 0 20px;
+    color: #5a699f;
+}
+.login_motivation{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+    font-size: 48px;
+    top: 90px;
+    left: 40px;
+    width: 280px;
+    font-style: italic;
+    line-height: 60px;
+}
+.h1_login{
+    position: absolute;
+    font-weight: bold;
+    color: #5a699f;
+    font-size: 24px;
+    top: 40px;
+    left: 540px;
+    border-bottom: 1px solid #5a699f;
+}
+.login_email_input{
+    position: absolute;
+    color: #5a699f;
+    top: 110px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+}
+input::placeholder{
+    color: #5a699f;
+}
+.login_password_input{
+    position: absolute;
+    color: #5a699f;
+    top: 170px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+}
+.login_forget_link{
+    position: absolute;
+    color: #5a699f;
+    top: 220px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+}
+.login_button{
+    position: absolute;
+    color: #5a699f;
+    background-color: white;
+    top: 280px;
+    left: 485px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    height: 40px;
+    width: 160px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+}
+.login_signup_link{
+    position: absolute;
+    color: #8392c8;
+    top: 330px;
+    left: 487px;
+    font-size: 16px;
+    font-family: 'Noto Serif Display';
+    z-index: 20;  
+}
+/*sign up*/
+.signup_form{
+    position:relative;
+    background-color: white;
+    height: 500px;
+    width: 800px;
+    color: #5a699f;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.signup_img{
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    border-radius: 20px 0 0 20px;
+    color: #5a699f;
+}
+.signup_motivation{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+    font-size: 26px;
+    top: 225px;
+    left: 40px;
+    width: 200px;
+    font-style: italic;
+    line-height: 30px;
+}
+.signup_p{
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+    font-size: 48px;
+    top: 90px;
+    left: 40px;
+    width: 280px;
+    line-height: 60px;
+}
+.h1_signup{
+    position: absolute;
+    font-weight: bold;
+    color: #5a699f;
+    font-size: 24px;
+    top: 40px;
+    left: 540px;
+    border-bottom: 1px solid #5a699f;
+}
+.signup_name_input{
+    position: absolute;
+    color: #5a699f;
+    top: 100px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+    z-index: 10;
+}
+.signup_surname_input{
+    position: absolute;
+    color: #5a699f;
+    top: 140px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+    z-index: 30;
+}
+.signup_date_input{
+    position: absolute;
+    color: #5a699f;
+    top: 180px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+    z-index: 40;
+}
+.signup_email_input{
+    position: absolute;
+    color: #5a699f;
+    top: 220px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+    z-index: 40;
+}
+.signup_password_input{
+    position: absolute;
+    color: #5a699f;
+    top: 260px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 350px;
+    z-index: 40;
+}
+.signup_button{
+    position: absolute;
+    color: #5a699f;
+    background-color: white;
+    top: 310px;
+    left: 485px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    height: 40px;
+    width: 160px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+}
+.or_on_signup{
+    position: absolute;
+    color: #5a699f;
+    top: 357px;
+    left: 558px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';
+    z-index: 10;  
+}
+.google_signup_button{
+    position: absolute;
+    color: #5a699f;
+    background-color: white;
+    top: 400px;
+    left: 430px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    height: 40px;
+    width: 280px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+}
+.google_logo{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    z-index: 20;
+    top: 407px;
+    left: 445px;
+}
+/*azov fundraiser*/
+.azov{
+    position: relative;
+    height: 160px;
+    width: 280px;
+    left: 482px;
+    top: 80px;
+}
+.azov_img{
+    position: absolute;
+    height: 160px;
+    width: 280px;
+    border-radius: 20px;
+}
+.azov_web{
+    position: absolute;
+    top: 125px;
+    left: 15px;
+}
+.azov_bank{
+    position: absolute;
+    top: 125px;
+    right: 15px;
+}
+/*header in profile*/
+.header_on_profile{
+    position: relative;
+}
+
+.header_a_profile{
+    position: absolute;
+    color: #5a699f;
+}
+.header_a_security{
+    position: absolute;
+    color: #5a699f;
+}
+.header_a_notification{
+    position: absolute;
+    color: #5a699f;
+}
+.left_panel{
+    position: relative;
+    background-color: white;
+    width: 250px;
+    height:600px;
+}
+.account_logo{
+    position: absolute;
+    height: 90px;
+    width: 95px;
+    top: 50px;
+    left: 70px;
+}
+/*profile main*/
+.card_profile{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    left: 320px;
+    top: -540px;
+    background-color: white;
+    border-radius: 20px;
+}
+.h1_profile{
+    position: absolute;
+    font-weight: bold;
+    color: #5a699f;
+    font-size: 24px;
+    top: 40px;
+    left: 110px;
+    border-bottom: 1px solid #5a699f;
+}
+.profile_name_input{
+    position: absolute;
+    color: #5a699f;
+    top: 100px;
+    left: 35px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 10;
+}
+.profile_surname_input{
+    position: absolute;
+    color: #5a699f;
+    top: 140px;
+    left: 35px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 30;
+}
+.profile_date_input{
+    position: absolute;
+    color: #5a699f;
+    top: 180px;
+    left: 35px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 40;
+}
+.profile_email_input{
+    position: absolute;
+    color: #5a699f;
+    top: 220px;
+    left: 35px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 40;
+}
+.profile_address_input{
+    position: absolute;
+    color: #5a699f;
+    top: 260px;
+    left: 35px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 40;
+}
+.profile_button{
+    position: absolute;
+    color: #5a699f;
+    background-color: white;
+    top: 310px;
+    left: 120px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    height: 40px;
+    width: 160px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+}
+/* Add photo in profile setting*/
+.add_photo{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    left: 770px;
+    top: -940px;
+    background-color: white;
+    border-radius: 20px;
+}
+.photo_profile{
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    top: 60px;
+    left: 85px;
+}
+.p_on_card_add_photo{
+    position: absolute;
+    color: #5a699f;
+    top: 200px;
+    left: 92px;
+    font-size: 24px;
+}
+/*header in profile*/
+.header_on_profile{
+    position: relative;
+    height: 50px;
+    background-color: white;
+}
+.header_a_profile{
+    position: absolute;
+    font-size: 18px;
+    top: 10px;
+    left: 370px;
+}
+.header_a_security{
+    position: absolute;
+    font-size: 18px;
+    top: 10px;
+    left: 460px;
+}
+.header_a_notification{
+    position: absolute;
+    font-size: 18px;
+    top: 10px;
+    left: 550px;
+}
+/*Left panel in profile*/
+.setting_on_panel img{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 160px;
+    left: 30px;
+}
+.setting_on_panel a{
+    position: absolute;
+    font-size: 18px;
+    color: #5a699f;
+    top: 162px;
+    left: 60px;
+}
+.announcement_on_panel img{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 195px;
+    left: 34px;
+}
+.announcement_on_panel a{
+    position: absolute;
+    font-size: 18px;
+    color: #5a699f;
+    top: 197px;
+    left: 69px;
+}
+.orders_on_panel img{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 235px;
+    left: 32px;
+}
+.orders_on_panel a{
+    position: absolute;
+    font-size: 18px;
+    color: #5a699f;
+    top: 235px;
+    left: 65px;
+}
+.button_add{
+    position: absolute;
+    background-color: white;
+    font-size: 48px;
+    color: #5a699f;
+    height: 60px;
+    width: 60px;
+    border-radius: 40px;
+    border: 0px;
+    top: 510px;
+    right: 80px;
+}
+/*Orders_active*/
+.active{
+    position:absolute;
+    top: 150px;
+    left: 300px;
+}
+/*Orders_archive*/
+.archive{
+    position:absolute;
+    top: 520px;
+    left: 300px;
+}
+/*Exchange card*/
+.exchange_form{
+    position:relative;
+    background-color: white;
+    height: 500px;
+    width: 800px;
+    color: #5a699f;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.exchange_name_input{
+    position: absolute;
+    color: #5a699f;
+    top: 100px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 20;
+}
+.exchange_surname_input{
+    position: absolute;
+    color: #5a699f;
+    top: 140px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 30;
+}
+.exchange_email_input{
+    position: absolute;
+    color: #5a699f;
+    top: 180px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 40;
+}
+.exchange_address_input{
+    position: absolute;
+    color: #5a699f;
+    top: 220px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 330px;
+    z-index: 40;
+}
+.exchange_pay{
+    position: absolute;
+    color: #5a699f;
+    background-color: white;
+    top: 260px;
+    left: 400px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';
+}
+.exchange_button{
+    position: absolute;
+    color: #5a699f;
+    background-color: white;
+    top: 330px;
+    left: 505px;
+    font-size: 20px;
+    font-family: 'Noto Serif Display';  
+    height: 40px;
+    width: 160px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+}
