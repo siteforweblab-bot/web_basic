@@ -100,7 +100,6 @@ a {
     min-width: 300px; 
     
     background-color: #fff; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     padding: 15px 10px; 
     z-index: 10; 
     border-radius: 6px;
@@ -172,7 +171,6 @@ a {
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .azov_bank {
@@ -183,13 +181,12 @@ a {
     font-weight: bold;
     font-size: 14px;
     text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .azov_web:hover, .azov_bank:hover {
     text-decoration: underline;
 }
-/*Кнопка-заголовок*/
+
 .section_title_container{
     display: inline-block;
     background-color: white;
@@ -206,7 +203,7 @@ a {
     margin-top: 110px;
     margin-left: 70px;
 }
-/*Картки книг*/
+
 .main_content{
     flex: 1; 
     padding-top: 20px;

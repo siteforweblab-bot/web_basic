@@ -1,4 +1,4 @@
-/* Основний контент */
+
 .main_content {
     background-color: #5a699f;
     display: flex;
@@ -12,7 +12,7 @@
     min-height: calc(100vh - 140px);
 }
 
-/* Ліва панель (така сама як у Profile) */
+/* Ліва панель */
 .left_panel {
     background-color: white;
     width: 100%;
@@ -34,7 +34,6 @@
     margin: 0 auto 30px;
 }
 
-/* Елементи меню */
 .setting_on_panel,
 .announcement_on_panel,
 .orders_on_panel {
@@ -80,15 +79,14 @@
     font-weight: 500;
 }
 
-/* Картка для зміни пароля (менша ніж у Profile) */
 .card_security {
     background-color: white;
     border-radius: 20px;
     padding: 30px 25px;
     width: 100%;
-    max-width: 400px; /* Менша ширина */
+    max-width: 400px;
     order: 2;
-    align-self: flex-start; /* Не розтягувати */
+    align-self: flex-start;
 }
 
 .h1_security {
@@ -101,7 +99,6 @@
     border-bottom: 1px solid #5a699f;
 }
 
-/* Поля вводу для паролів */
 .security_input_group {
     margin-bottom: 20px;
 }
@@ -124,7 +121,6 @@ input::placeholder {
     color: #8392c8;
 }
 
-/* Кнопка збереження */
 .security_button {
     color: #5a699f;
     background-color: white;
@@ -145,7 +141,7 @@ input::placeholder {
     color: white;
 }
 
-/* Хедер профілю */
+/* Хедер */
 .header_on_profile {
     background-color: white;
     padding: 15px 20px;
@@ -171,7 +167,7 @@ input::placeholder {
 }
 
 .header_a_security {
-    color: #8392c8; /* Підсвітити поточну сторінку */
+    color: #8392c8;
     font-weight: bold;
 }
 
@@ -198,9 +194,6 @@ footer {
     color: white;
 }
 
-/* Медіа-запити для адаптивності */
-
-/* Планшети */
 @media (max-width: 1024px) {
     .main_content {
         justify-content: center;
@@ -217,7 +210,6 @@ footer {
     }
 }
 
-/* Мобільні пристрої (768px і менше) */
 @media (max-width: 768px) {
     .main_content {
         flex-direction: column;

@@ -1,4 +1,4 @@
-/* Основний контент для сторінки Orders */
+
 .main_content {
     background-color: #5a699f;
     display: flex;
@@ -34,7 +34,6 @@
     margin: 0 auto 30px;
 }
 
-/* Елементи меню */
 .setting_on_panel,
 .announcement_on_panel,
 .orders_on_panel {
@@ -58,7 +57,7 @@
 }
 
 .orders_on_panel img {
-    filter: brightness(0) invert(1); /* Біла іконка */
+    filter: brightness(0) invert(1);
 }
 
 .setting_on_panel:hover,
@@ -81,7 +80,6 @@
     font-weight: 500;
 }
 
-/* Контейнер для замовлень */
 .orders_content {
     flex: 1;
     order: 2;
@@ -89,7 +87,6 @@
     position: relative;
 }
 
-/* Заголовки секцій */
 .orders_section {
     margin-bottom: 20px;
 }
@@ -107,14 +104,12 @@
     margin-bottom: 30px;
 }
 
-/* Сітка карток */
 .orders_grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
-/* Картки книг (аналогічно головній сторінці) */
 .book_card {
     position: relative;
     border-radius: 10px;
@@ -172,7 +167,7 @@
     padding-right: 20px;
 }
 
-/* Хедер профілю */
+/* Хедер*/
 .header_on_profile {
     background-color: white;
     padding: 15px 20px;
@@ -206,9 +201,6 @@ footer {
     color: white;
 }
 
-/* Медіа-запити для адаптивності */
-
-/* Планшети */
 @media (max-width: 1024px) {
     .main_content {
         justify-content: center;
@@ -228,7 +220,6 @@ footer {
     }
 }
 
-/* Мобільні пристрої (768px і менше) */
 @media (max-width: 768px) {
     .main_content {
         flex-direction: column;

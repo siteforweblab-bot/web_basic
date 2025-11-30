@@ -1,4 +1,4 @@
-/* Хедер профілю */
+/* Хедер */
 .header_on_profile {
     background-color: white;
     padding: 15px 20px;
@@ -24,7 +24,7 @@
 }
 
 .header_a_notification {
-    color: #8392c8; /* Підсвітити поточну сторінку */
+    color: #8392c8; 
     font-weight: bold;
 }
 
@@ -33,7 +33,7 @@
 .header_a_notification:hover {
     color: #8392c8;
 }
-/* Основний контент */
+
 .main_content {
     background-color: #5a699f;
     display: flex;
@@ -47,7 +47,7 @@
     min-height: calc(100vh - 140px);
 }
 
-/* Ліва панель (така сама як у Profile) */
+/* Ліва панель*/
 .left_panel {
     background-color: white;
     width: 100%;
@@ -68,8 +68,6 @@
     display: block;
     margin: 0 auto 30px;
 }
-
-/* Елементи меню */
 .setting_on_panel,
 .announcement_on_panel,
 .orders_on_panel {
@@ -115,14 +113,12 @@
     font-weight: 500;
 }
 
-/* Картка для налаштувань сповіщень */
 .card_notification {
     background-color: white;
     border-radius: 20px;
     padding: 30px 25px;
     width: 100%;
     max-width: 450px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     order: 2;
     align-self: flex-start;
 }
@@ -137,14 +133,11 @@
     border-bottom: 1px solid #5a699f;
 }
 
-/* Контейнер для опцій сповіщень */
 .notification_options {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-
-/* Окрема опція */
 .notification_option {
     display: flex;
     align-items: center;
@@ -158,8 +151,6 @@
     font-weight: 500;
     flex: 1;
 }
-
-/* Кастомні чекбокси */
 .notification_checkbox {
     width: 16px;
     height: 16px;
@@ -186,19 +177,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-/* Хедер профілю */
-.header_on_profile {
-    background-color: white;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
 .header_a_notification {
-    color: #8392c8; /* Підсвітити поточну сторінку */
+    color: #8392c8;
     font-weight: bold;
 }
 
@@ -222,18 +202,12 @@ footer {
 .footer_link:hover {
     color: white;
 }
-
-/* Медіа-запити для адаптивності */
-
-/* Планшети */
 @media (max-width: 1024px) {
     .card_notification {
         max-width: 400px;
         margin: 50px auto 0;
     }
 }
-
-/* Мобільні пристрої (768px і менше) */
 @media (max-width: 768px) {
     .card_notification {
         max-width: 500px;

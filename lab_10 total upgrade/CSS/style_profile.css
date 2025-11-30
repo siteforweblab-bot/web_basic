@@ -29,11 +29,10 @@
     color: #8392c8;
 }
 .header_a_profile {
-    color: #8392c8; /* Підсвітити поточну сторінку */
+    color: #8392c8;
     font-weight: bold;
 }
 
-/* Основний контент */
 .main_content {
     background-color: #5a699f;
     display: flex;
@@ -45,7 +44,6 @@
     justify-content: center;
 }
 
-/* Ліва панель */
 .left_panel {
     background-color: white;
     border-radius: 20px;
@@ -62,7 +60,6 @@
     margin: 0 auto 30px;
 }
 
-/* Елементи меню */
 .setting_on_panel,
 .announcement_on_panel,
 .orders_on_panel {
@@ -108,14 +105,12 @@
     font-weight: 500;
 }
 
-/* Картка профілю */
 .card_profile {
     background-color: white;
     border-radius: 20px;
     padding: 30px 25px;
     width: 100%;
     max-width: 450px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     order: 2;
     flex: 1;
 }
@@ -130,7 +125,6 @@
     border-bottom: 1px solid #5a699f;
 }
 
-/* Поля вводу */
 .profile_input_group {
     margin-bottom: 20px;
 }
@@ -155,7 +149,6 @@ input::placeholder {
     color: #8392c8;
 }
 
-/* Кнопка збереження */
 .profile_button {
     color: #5a699f;
     background-color: white;
@@ -176,7 +169,6 @@ input::placeholder {
     color: white;
 }
 
-/* Блок додавання фото */
 .add_photo {
     background-color: white;
     border-radius: 20px;
@@ -221,9 +213,6 @@ footer {
     color: white;
 }
 
-/* Медіа-запити для адаптивності */
-
-/* Планшети */
 @media (max-width: 1024px) {
     .main_content {
         gap: 20px;
@@ -242,7 +231,6 @@ footer {
     }
 }
 
-/* Мобільні пристрої (768px і менше) */
 @media (max-width: 768px) {
     .main_content {
         flex-direction: column;

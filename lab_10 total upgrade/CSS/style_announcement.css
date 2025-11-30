@@ -1,4 +1,4 @@
-/* Основний контент для сторінки Announcement */
+
 .main_content {
     background-color: #5a699f;
     display: flex;
@@ -33,8 +33,6 @@
     display: block;
     margin: 0 auto 30px;
 }
-
-/* Елементи меню */
 .setting_on_panel,
 .announcement_on_panel,
 .orders_on_panel {
@@ -57,7 +55,7 @@
     text-decoration: none;
 }
 .announcement_on_panel img {
-    filter: brightness(0) invert(1); /* Біла іконка */
+    filter: brightness(0) invert(1);
 }
 
 .setting_on_panel:hover,
@@ -79,8 +77,6 @@
     font-size: 16px;
     font-weight: 500;
 }
-
-/* Контейнер для карток книг */
 .announcement_content {
     flex: 1;
     order: 2;
@@ -90,8 +86,6 @@
     padding: 20px;
     position: relative;
 }
-
-/* Картки книг (аналогічно головній сторінці) */
 .book_card {
     position: relative;
     border-radius: 10px;
@@ -149,8 +143,6 @@
     color: white;
     padding-right: 20px;
 }
-
-/* Кнопка додати */
 .button_add {
     position: fixed;
     background-color: white;
@@ -204,9 +196,6 @@ footer {
     color: white;
 }
 
-/* Медіа-запити для адаптивності */
-
-/* Планшети */
 @media (max-width: 1024px) {
     .main_content {
         justify-content: center;
@@ -222,7 +211,6 @@ footer {
     }
 }
 
-/* Мобільні пристрої (768px і менше) */
 @media (max-width: 768px) {
     .main_content {
         flex-direction: column;

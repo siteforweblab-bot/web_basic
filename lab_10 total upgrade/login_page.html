@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Exchange</title>
     <link rel="icon" type="image/png" sizes="16x16"  href="/logo/logo.png">
-    <link rel="stylesheet" href="/CSS/style_login.css">
+    <link rel="stylesheet" href="CSS/style_login.css">
 </head>
 <body>
    <header class="header">
@@ -75,4 +75,17 @@
         <p>Book Exchange 2025</p>
     </footer>
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const loginButton = document.querySelector('.login_button');
+    
+    if (loginButton) {
+        loginButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('You are logged in');
+            window.location.href = '/main.html';
+        });
+    }
+});
+</script>
 </html>
