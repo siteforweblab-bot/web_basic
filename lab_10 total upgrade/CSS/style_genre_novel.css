@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*body*/
+body{
+    font-family: 'Noto Serif Display';
+    background-color: #5a699f;
+    color: white;
+    line-height: 1.6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/*header*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 0 20px; 
+    z-index: 20;
+    text-align: center;
+}
+.logo_img{
+    height: 50px;
+    width: auto;
+    margin-right: 5px;
+}
+.search_bar{
+    flex-grow: 1;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+.search_input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Noto Serif Display';
+    font-size: 14px;
+    color: #8392c8;
+}
+.search_icon{
+    height: 25px;
+    width: auto;
+}
+.setting_icon{
+    height: 25px;
+    width: 25px;
+}
+/*navigation*/
+.header_nav{
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    height: 100%; 
+}
+
+.nav_link{
+    position: relative;
+    color: #5a699f;
+    font-weight: bold;
+    padding: 15px 0; 
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 0.2s;
+    font-size: 14px;
+}
+.nav_link:hover {
+    color: #3f51b5; 
+}
+.dropdown_container {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    height: 100%; 
+}
+
+.dropdown_menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: auto; 
+    transform: translateX(-80%);
+
+    width: 100%; 
+    min-width: 300px; 
+    
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 15px 10px; 
+    z-index: 10; 
+    border-radius: 6px;
+    border-top: 3px solid #8392c8;
+    
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); 
+    gap: 10px 10px;
+}
+
+.fundraisers_menu {
+   min-width: 700px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px 20px;
+}
+
+.settings_menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 10px 0px;
+    gap: 5px;
+}
+
+.dropdown_item {
+    display: block;
+    color: #5a699f; 
+    font-weight: 500; 
+    font-size: 14px;
+    padding: 5px 20px;
+    white-space: nowrap; 
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+.dropdown_item:hover {
+    color: white;
+    background-color: #8392c8;
+}
+.dropdown_container:hover .dropdown_menu {
+    display: grid;
+}
+.dropdown_container:hover .settings_menu {
+    display: flex;
+}
+/*Кнопка-заголовок*/
+.section_title_container{
+    display: inline-block;
+    background-color: white;
+    color: #5a699f;
+    font-weight: bold;
+    font-size: 20px;
+    width: 160px;
+    height: 50px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    z-index: 5; 
+    margin-top: 110px;
+    margin-left: 70px;
+}
+/*Картки книг*/
+.main_content{
+    flex: 1; 
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.card-wrapper {
+    padding: 20px;
+}
+.book_card {
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    height: 240px;
+    width: 300px;
+    float: left;
+    margin: 20px 50px 40px 50px;
+}
+.book_img{
+    position: absolute;
+    top:40px;
+    left: 82px;
+    height: 160px;
+    width: 130px;
+    z-index: 10;
+}
+.book_info{
+    position: absolute;
+    background-color: #8392c8;
+    width: 300px;
+    height: 72px;
+    border-radius: 0 0 10px 10px;
+    z-index: 15;
+    bottom: 0;
+}
+.book_name{
+    position: absolute;
+    text-align: left;
+    font-weight: bold;
+    padding-top: 21px;
+    padding-left: 20px;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 60%;
+}
+.book_cost{
+    position: absolute;
+    text-align: right;
+    font-weight: bold;
+    padding-top: 21px;
+    padding-left: 205px;
+    font-size: 18px;
+}
+/*footer*/
+footer{
+    height: auto;
+    width: 100%;
+    background-color: #485b9c;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #8392c8;
+    margin-top: auto;
+}

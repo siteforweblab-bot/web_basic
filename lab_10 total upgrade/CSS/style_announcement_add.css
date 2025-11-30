@@ -1,0 +1,273 @@
+/* Основний контент */
+.main_content {
+    background-color: #5a699f;
+    display: flex;
+    gap: 30px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: calc(100vh - 140px);
+}
+
+/* Ліва панель */
+.left_panel {
+    background-color: white;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    order: 1;
+    margin-left: 0;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.account_logo {
+    height: 90px;
+    width: 95px;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+/* Елементи меню */
+.setting_on_panel,
+.announcement_on_panel,
+.orders_on_panel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.announcement_on_panel {
+    background-color: #8392c8;
+    color: white;
+}
+
+.announcement_on_panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.announcement_on_panel img {
+    filter: brightness(0) invert(1); /* Біла іконка */
+}
+
+.setting_on_panel:hover,
+.orders_on_panel:hover {
+    background-color: #f0f2f8;
+}
+
+.setting_on_panel img,
+.announcement_on_panel img,
+.orders_on_panel img {
+    height: 24px;
+    width: 24px;
+}
+
+.setting_on_panel a,
+.orders_on_panel a {
+    color: #5a699f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Картка форми */
+.card_profile {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    flex: 1;
+    max-width: 400px;
+    order: 2;
+}
+
+.h1_profile {
+    font-weight: bold;
+    color: #5a699f;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #5a699f;
+}
+
+/* Поля вводу */
+.profile_input_group {
+    margin-bottom: 10px;
+}
+
+.profile_name_input,
+.profile_surname_input,
+.profile_date_input,
+.profile_email_input,
+.profile_address_input {
+    color: #5a699f;
+    font-size: 16px;
+    font-family: 'Noto Serif Display';  
+    border: 0;
+    border-bottom: 1px solid #5a699f;
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+}
+
+input::placeholder {
+    color: #8392c8;
+}
+
+/* Поле для сюжету (вище) */
+.profile_address_input {
+    min-height: 20px;
+    resize: vertical;
+}
+
+/* Кнопка додавання */
+.profile_button {
+    color: #5a699f;
+    background-color: white;
+    font-size: 18px;
+    font-family: 'Noto Serif Display';  
+    height: 45px;
+    width: 160px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 30px auto 0;
+}
+
+.profile_button:hover {
+    background-color: #5a699f;
+    color: white;
+}
+
+/* Блок додавання фото */
+.add_photo {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    align-self: flex-start;
+    order: 3;
+}
+
+.photo_profile {
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.p_on_card_add_photo {
+    color: #5a699f;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Хедер профілю */
+.header_on_profile {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo_img {
+    height: 40px;
+    width: auto;
+}
+
+/* Футер */
+footer {
+    background-color: #485b9c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid #8392c8;
+}
+
+.footer_link {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+.footer_link:hover {
+    color: white;
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Планшети */
+@media (max-width: 1024px) {
+    .main_content {
+        justify-content: center;
+    }
+    
+    .left_panel {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .card_profile {
+        max-width: 450px;
+    }
+    
+    .add_photo {
+        max-width: 200px;
+    }
+}
+
+/* Мобільні пристрої (768px і менше) */
+@media (max-width: 768px) {
+    .main_content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .left_panel,
+    .card_profile,
+    .add_photo {
+        max-width: 500px;
+        width: 100%;
+        order: unset;
+        margin: 0 auto;
+    }
+    
+    .left_panel {
+        order: 1;
+    }
+    
+    .card_profile {
+        order: 2;
+    }
+    
+    .add_photo {
+        order: 3;
+        max-width: 300px;
+    }
+    
+    .header_on_profile {
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+}

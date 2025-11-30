@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="/logo/logo.png">
+    <link rel="stylesheet" href="/CSS/style_ordering_page.css">
+</head>
+<body>
+   <header class="header">
+        <a href="/main.html"><img src="/logo/logo.png" alt="logo" class="logo_img"></a>
+        <div class="search_bar">
+            <img src="/logo/loops.png" alt="search_icon" class="search_icon">
+            <input type="text" placeholder="Search your book" class="search_input">
+        </div>
+        <nav class="header_nav">
+            <div class="dropdown_container">
+                <a href="#" class="nav_link">Genres</a>
+                <div class="dropdown_menu genres_menu">
+                    <a href="/genre_novel.html" class="dropdown_item">Novel</a>
+                    <a href="#" class="dropdown_item">Mystery</a>
+                    <a href="#" class="dropdown_item">Fiction</a>
+                    <a href="#" class="dropdown_item">Fantasy</a>
+                    <a href="#" class="dropdown_item">Thriller</a>
+                    <a href="#" class="dropdown_item">Science Fiction</a>
+                    <a href="#" class="dropdown_item">Horror</a>
+                    <a href="#" class="dropdown_item">Adventure</a>
+                    <a href="#" class="dropdown_item">History</a>
+                    <a href="#" class="dropdown_item">Children</a>
+                    <a href="#" class="dropdown_item">Teenager</a>
+                    <a href="#" class="dropdown_item">Adult</a>
+                </div>
+            </div>
+            <div class="dropdown_container">
+                <a href="#" class="nav_link">Fundraisers</a>
+                <div class="dropdown_menu fundraisers_menu">
+                    <a href="/fundraisers_azov.html" class="dropdown_item">Azov</a>
+                    <a href="#" class="dropdown_item">128th Mountain Assault Brigade</a>
+                    <a href="#" class="dropdown_item">3 Separate Assault Brigade</a>
+                    <a href="#" class="dropdown_item">47th Separate Mechanized Brigade</a>
+                    <a href="#" class="dropdown_item">110th Separate Mechanized Brigade</a>
+                    <a href="#" class="dropdown_item">59th Separate Motorized Infantry Brigade</a>
+                </div>
+            </div>
+            <div class="dropdown_container">
+                <a href="#" class="nav_link setting_link"><img src="/logo/setting.png" alt="setting_icon" class="setting_icon"></a>
+                <div class="dropdown_menu setting_menu">
+                    <a href="/login_page.html" class="dropdown_item">Login</a>
+                    <a href="/profile.html" class="dropdown_item">My account</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main_content">
+        <div class="exchange_form">
+            <div class="exchange_img_container">
+                <img src="https://i.pinimg.com/736x/8c/7a/0d/8c7a0d52ca4dbca6559f1926d083de00.jpg" alt="exchange_img" class="login_img">
+                <p class="login_motivation">JOY DOUBLES WHEN SHARED WITH OTHERS.</p>
+            </div>
+            <div class="exchange_form_container">
+                <h1 class="h1_login">Exchange</h1>
+                <form action="https://httpbin.org/post" method="post">
+                    <div class="exchange_input_group">
+                        <input type="text" placeholder="Name" class="exchange_name_input" id="name" name="name">
+                    </div>
+                    <div class="exchange_input_group">
+                        <input type="text" placeholder="Surname" class="exchange_surname_input" id="surname" name="surname">
+                    </div>
+                    <div class="exchange_input_group">
+                        <input type="email" placeholder="Email" class="exchange_email_input" id="email" name="email">
+                    </div>
+                    <div class="exchange_input_group">
+                        <input type="text" placeholder="Address" class="exchange_address_input" id="address" name="address">
+                    </div>
+                    
+                    <a href="https://pay.google.com/" class="exchange_pay">Pay with Google</a>
+                    
+                    <button class="exchange_button" type="submit">Exchange</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Support service: <a href="mailto:bookexchange@gmail.ua" class="footer_link">bookexchange@gmail.ua</a></p>
+        <p>Book Exchange 2025</p>
+    </footer>
+</body>
+</html>

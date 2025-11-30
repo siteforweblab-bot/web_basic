@@ -1,0 +1,253 @@
+/* Хедер профілю */
+.header_on_profile {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo_img {
+    height: 40px;
+    width: auto;
+}
+
+.header_a_profile,
+.header_a_security,
+.header_a_notification {
+    color: #5a699f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.header_a_notification {
+    color: #8392c8; /* Підсвітити поточну сторінку */
+    font-weight: bold;
+}
+
+.header_a_profile:hover,
+.header_a_security:hover,
+.header_a_notification:hover {
+    color: #8392c8;
+}
+/* Основний контент */
+.main_content {
+    background-color: #5a699f;
+    display: flex;
+    gap: 30px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: calc(100vh - 140px);
+}
+
+/* Ліва панель (така сама як у Profile) */
+.left_panel {
+    background-color: white;
+    width: 100%;
+    max-width: 280px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    order: 1;
+    margin-left: 0;
+    align-self: flex-start;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.account_logo {
+    height: 90px;
+    width: 95px;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+/* Елементи меню */
+.setting_on_panel,
+.announcement_on_panel,
+.orders_on_panel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.setting_on_panel {
+    background-color: #8392c8;
+}
+
+.setting_on_panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.setting_on_panel img {
+    filter: brightness(0) invert(1);
+}
+
+.announcement_on_panel:hover,
+.orders_on_panel:hover {
+    background-color: #f0f2f8;
+}
+
+.setting_on_panel img,
+.announcement_on_panel img,
+.orders_on_panel img {
+    height: 24px;
+    width: 24px;
+}
+
+.announcement_on_panel a,
+.orders_on_panel a {
+    color: #5a699f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Картка для налаштувань сповіщень */
+.card_notification {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    order: 2;
+    align-self: flex-start;
+}
+
+.h1_notification {
+    font-weight: bold;
+    color: #5a699f;
+    font-size: 22px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #5a699f;
+}
+
+/* Контейнер для опцій сповіщень */
+.notification_options {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Окрема опція */
+.notification_option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.notification_text {
+    color: #5a699f;
+    font-size: 18px;
+    font-weight: 500;
+    flex: 1;
+}
+
+/* Кастомні чекбокси */
+.notification_checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #5a699f;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.notification_checkbox:checked {
+    background-color: #5a699f;
+    border-color: #5a699f;
+}
+
+.notification_checkbox:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Хедер профілю */
+.header_on_profile {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header_a_notification {
+    color: #8392c8; /* Підсвітити поточну сторінку */
+    font-weight: bold;
+}
+
+.orders_on_panel:hover,
+.announcement_on_panel:hover {
+    background-color: #f0f2f8;
+}
+/* Футер */
+footer {
+    background-color: #485b9c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid #8392c8;
+}
+.footer_link {
+    color: #e0e0e0;
+}
+
+.footer_link:hover {
+    color: white;
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Планшети */
+@media (max-width: 1024px) {
+    .card_notification {
+        max-width: 400px;
+        margin: 50px auto 0;
+    }
+}
+
+/* Мобільні пристрої (768px і менше) */
+@media (max-width: 768px) {
+    .card_notification {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        order: 2;
+    }
+    
+    .notification_text {
+        font-size: 16px;
+    }
+    
+    .notification_checkbox {
+        width: 22px;
+        height: 22px;
+    }
+}

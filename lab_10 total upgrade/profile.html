@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Exchange</title>
     <link rel="icon" type="image/png" sizes="16x16"  href="/logo/logo.png">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/CSS/style_profile.css">
 </head>
 <body>
    <header class="header_on_profile">
     <a href="/main.html"><img src="/logo/logo.png" alt="logo" class="logo_img"></a>
+    <a href="/profile.html" class="header_a_profile">Profile</a>
+    <a href="/profile_security.html" class="header_a_security">Security</a>
+    <a href="/profile_notification.html" class="header_a_notification">Notification</a>
     </header>
     <main class="main_content">
         <div class="left_panel">
             <img src="/logo/nickname.png" alt="account_logo" class="account_logo">
             <div class="setting_on_panel">
                 <img src="/logo/setting.png">
-                <a href="/profile.html">Setting</a>
+                <a href="/profile.html" style="color: white;">Settings</a>
             </div>
             <div class="announcement_on_panel">
                 <img src="/logo/announcement.png">
@@ -28,20 +31,20 @@
             </div>
         </div>
         <div class="card_profile">
-            <h1 class="h1_profile">About the Book</h1>
+            <h1 class="h1_profile">Change the Data</h1>
             <form action="https://httpbin.org/post" method="post">
                 <input type="text" placeholder="Name" class="profile_name_input" id="name" name="name">
-            <input type="text" placeholder="Author" class="profile_surname_input" id="surname" name="surname">
-            <input type="text" placeholder="Genre" class="profile_date_input" id="genre" name="genre">
-            <input type="text" placeholder="Fundraiser" class="profile_email_input" id="fundraiser" name="fundraiser">
-            <input type="text" placeholder="Add a plot" class="profile_address_input" id="plot" name="plot">
+            <input type="text" placeholder="Surname" class="profile_surname_input" id="surname" name="surname">
+            <input type="date" placeholder="Date of Birth" class="profile_date_input" id="date of birth" name="date of birth">
+            <input type="email" placeholder="Email" class="profile_email_input" id="email" name="email">
+            <input type="address" placeholder="Address" class="profile_address_input" id="address" name="address">
             <a href="">
-                <button class="profile_button" type="submit">Add</button>
+                <button class="profile_button" type="submit">Save</button>
             </a>
             </form>
         </div>
         <div class="add_photo">
-            <img src="/logo/бук.png" class="photo_profile">
+            <img src="/logo/account_logo.png" class="photo_profile">
             <p class="p_on_card_add_photo">Add a photo</p>
         </div>
     </main>

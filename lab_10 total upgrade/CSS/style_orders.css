@@ -1,0 +1,260 @@
+/* Основний контент для сторінки Orders */
+.main_content {
+    background-color: #5a699f;
+    display: flex;
+    gap: 30px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: calc(100vh - 140px);
+}
+
+/* Ліва панель */
+.left_panel {
+    background-color: white;
+    width: 100%;
+    max-width: 280px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    order: 1;
+    margin-left: 0;
+    align-self: stretch;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.account_logo {
+    height: 90px;
+    width: 95px;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+/* Елементи меню */
+.setting_on_panel,
+.announcement_on_panel,
+.orders_on_panel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.orders_on_panel {
+    background-color: #8392c8;
+}
+
+.orders_on_panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.orders_on_panel img {
+    filter: brightness(0) invert(1); /* Біла іконка */
+}
+
+.setting_on_panel:hover,
+.announcement_on_panel:hover {
+    background-color: #f0f2f8;
+}
+
+.setting_on_panel img,
+.announcement_on_panel img,
+.orders_on_panel img {
+    height: 24px;
+    width: 24px;
+}
+
+.setting_on_panel a,
+.announcement_on_panel a{
+    color: #5a699f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Контейнер для замовлень */
+.orders_content {
+    flex: 1;
+    order: 2;
+    padding: 20px;
+    position: relative;
+}
+
+/* Заголовки секцій */
+.orders_section {
+    margin-bottom: 20px;
+}
+
+.section_title {
+    display: inline-block;
+    background-color: white;
+    color: #5a699f;
+    font-weight: bold;
+    font-size: 20px;
+    width: 120px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Сітка карток */
+.orders_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Картки книг (аналогічно головній сторінці) */
+.book_card {
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    height: 240px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.book_img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 160px;
+    width: 130px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.book_info {
+    position: absolute;
+    background-color: #8392c8;
+    width: 100%;
+    height: 72px;
+    border-radius: 0 0 10px 10px;
+    z-index: 15;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book_name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    padding-left:20px ;
+}
+
+.book_cost {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    text-align: right;
+    white-space: nowrap;
+    color: white;
+    padding-right: 20px;
+}
+
+/* Хедер профілю */
+.header_on_profile {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo_img {
+    height: 40px;
+    width: auto;
+}
+
+/* Футер */
+footer {
+    background-color: #485b9c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid #8392c8;
+}
+
+.footer_link {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+.footer_link:hover {
+    color: white;
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Планшети */
+@media (max-width: 1024px) {
+    .main_content {
+        justify-content: center;
+    }
+    
+    .left_panel {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .orders_content {
+        width: 100%;
+    }
+    
+    .orders_grid {
+        justify-items: center;
+    }
+}
+
+/* Мобільні пристрої (768px і менше) */
+@media (max-width: 768px) {
+    .main_content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .left_panel,
+    .orders_content {
+        max-width: 100%;
+        width: 100%;
+        order: unset;
+        margin: 0 auto;
+    }
+    
+    .left_panel {
+        order: 1;
+    }
+    
+    .orders_content {
+        order: 2;
+        padding: 10px;
+    }
+    
+    .orders_grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

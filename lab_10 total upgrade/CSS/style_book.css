@@ -1,0 +1,324 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*body*/
+body{
+    font-family: 'Noto Serif Display';
+    background-color: #5a699f;
+    color: white;
+    line-height: 1.6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+/*header*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding: 0 20px; 
+    z-index: 20;
+    text-align: center;
+}
+.logo_img{
+    height: 50px;
+    width: auto;
+    margin-right: 5px;
+}
+.search_bar{
+    flex-grow: 1;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+.search_input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Noto Serif Display';
+    font-size: 14px;
+    color: #8392c8;
+}
+.search_icon{
+    height: 25px;
+    width: auto;
+}
+.setting_icon{
+    height: 25px;
+    width: 25px;
+}
+/*navigation*/
+.header_nav{
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    height: 100%; 
+}
+
+.nav_link{
+    position: relative;
+    color: #5a699f;
+    font-weight: bold;
+    padding: 15px 0; 
+    display: inline-block;
+    white-space: nowrap;
+    transition: color 0.2s;
+    font-size: 14px;
+}
+.nav_link:hover {
+    color: #3f51b5; 
+}
+.dropdown_container {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    height: 100%; 
+}
+
+.dropdown_menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: auto; 
+    transform: translateX(-80%);
+
+    width: 100%; 
+    min-width: 300px; 
+    
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 15px 10px; 
+    z-index: 10; 
+    border-radius: 6px;
+    border-top: 3px solid #8392c8;
+    
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); 
+    gap: 10px 10px;
+}
+
+.fundraisers_menu {
+   min-width: 700px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px 20px;
+}
+
+.settings_menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 10px 0px;
+    gap: 5px;
+}
+
+.dropdown_item {
+    display: block;
+    color: #5a699f; 
+    font-weight: 500; 
+    font-size: 14px;
+    padding: 5px 20px;
+    white-space: nowrap; 
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+}
+.dropdown_item:hover {
+    color: white;
+    background-color: #8392c8;
+}
+.dropdown_container:hover .dropdown_menu {
+    display: grid;
+}
+.dropdown_container:hover .settings_menu {
+    display: flex;
+}
+/*footer*/
+footer{
+    height: auto;
+    width: 100%;
+    background-color: #485b9c;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #8392c8;
+    margin-top: auto;
+}
+/*BOOK*/
+.about_book {
+    background-color: white;
+    color: #5a699f;
+    margin: 100px auto 20px;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 440px;
+    width: 90%;
+}
+.about_book_im {
+    width: 130px;
+    height: 160px;
+    margin: 0 auto 20px;
+    display: block;
+}
+.h1_about_book {
+    font-size: 24px;
+    text-align: center;
+    color: #5a699f;
+}
+
+.author_about_book,
+.genre_about_book,
+.fundraisers_about_book,
+.cost_about_book {
+    text-align: center;
+}
+
+.cost_about_book {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+.plot_about_book {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.plot_text_about_book {
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.button_about_book {
+    background-color: white;
+    height: 40px;
+    width: 120px;
+    border: 1px solid #5a699f;
+    border-radius: 20px;
+    color: #5a699f;
+    font-family: 'Noto Serif Display';
+    font-size: 16px;
+    display: block;
+    margin: 20px auto 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button_about_book:hover {
+    background-color: #5a699f;
+    color: white;
+}
+@media (min-width: 768px) {
+    .about_book {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        grid-template-rows: auto auto auto auto 1fr auto;
+        gap: 15px;
+        padding: 25px;
+        max-width: 600px;
+    }
+    
+    .about_book_im {
+        grid-column: 1;
+        grid-row: 1 / span 4;
+        margin: 0;
+    }
+    
+    .h1_about_book {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .author_about_book {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+    }
+    
+    .genre_about_book {
+        grid-column: 2;
+        grid-row: 3;
+        text-align: left;
+    }
+    
+    .fundraisers_about_book {
+        grid-column: 2;
+        grid-row: 4;
+        text-align: left;
+    }
+    
+    .book_divider {
+        grid-column: 1 / span 2;
+        grid-row: 5;
+    }
+    
+    .plot_about_book {
+        grid-column: 1 / span 2;
+        grid-row: 6;
+        text-align: left;
+    }
+    
+    .plot_text_about_book {
+        grid-column: 1 / span 2;
+        grid-row: 7;
+    }
+    
+    .cost_about_book {
+        grid-column: 1;
+        grid-row: 8;
+        text-align: left;
+    }
+    
+    .button_about_book {
+        grid-column: 2;
+        grid-row: 8;
+        margin: 0;
+        justify-self: end;
+    }
+}
+@media (min-width: 1024px) {
+    .about_book {
+        max-width: 800px;
+        grid-template-columns: 150px 1fr;
+        gap: 20px;
+    }
+    
+    .about_book_im {
+        width: 150px;
+        height: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .about_book {
+        width: 95%;
+        margin: 80px auto 20px;
+        padding: 15px;
+    }
+    
+    .about_book_im {
+        width: 120px;
+        height: 140px;
+    }
+    
+    .h1_about_book {
+        font-size: 20px;
+    }
+    
+    .plot_text_about_book {
+        font-size: 14px;
+    }
+}

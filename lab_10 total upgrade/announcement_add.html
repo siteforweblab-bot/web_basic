@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="/logo/logo.png">
+    <link rel="stylesheet" href="/CSS/style_announcement_add.css">
+</head>
+<body>
+   <header class="header_on_profile">
+        <a href="/main.html"><img src="/logo/logo.png" alt="logo" class="logo_img"></a>
+    </header>
+    
+    <main class="main_content">
+        <div class="left_panel">
+            <img src="/logo/nickname.png" alt="account_logo" class="account_logo">
+            <div class="setting_on_panel">
+                <img src="/logo/setting.png" alt="settings icon">
+                <a href="/profile.html">Settings</a>
+            </div>
+            <div class="announcement_on_panel">
+                <img src="/logo/announcement.png" alt="announcement icon">
+                <a href="/announcement.html">Announcement</a>
+            </div>
+            <div class="orders_on_panel">
+                <img src="/logo/orders.png" alt="orders icon">
+                <a href="/orders.html">Orders</a>
+            </div>
+        </div>
+        <div class="card_profile">
+            <h1 class="h1_profile">About the Book</h1>
+            <form action="https://httpbin.org/post" method="post">
+                <div class="profile_input_group">
+                    <input type="text" placeholder="Name" class="profile_name_input" id="name" name="name">
+                </div>
+                <div class="profile_input_group">
+                    <input type="text" placeholder="Author" class="profile_surname_input" id="author" name="author">
+                </div>
+                <div class="profile_input_group">
+                    <input type="text" placeholder="Genre" class="profile_date_input" id="genre" name="genre">
+                </div>
+                <div class="profile_input_group">
+                    <input type="text" placeholder="Choose fundraiser" class="profile_email_input" id="fundraiser" name="fundraiser">
+                </div>
+                <div class="profile_input_group">
+                    <input type="text" placeholder="Add a plot" class="profile_address_input" id="plot" name="plot">
+                </div>
+                <button class="profile_button" type="submit">Add</button>
+            </form>
+        </div>
+        
+        <!-- Права панель для фото -->
+        <div class="add_photo">
+            <img src="/logo/бук.png" alt="book photo" class="photo_profile">
+            <p class="p_on_card_add_photo">Add a photo</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Support service: <a href="mailto:bookexchange@gmail.ua" class="footer_link">bookexchange@gmail.ua</a></p>
+        <p>Book Exchange 2025</p>
+    </footer>
+</body>
+</html>

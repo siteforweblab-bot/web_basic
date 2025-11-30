@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Exchange</title>
     <link rel="icon" type="image/png" sizes="16x16"  href="/logo/logo.png">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/CSS/style_signup.css">
 </head>
 <body>
    <header class="header">
@@ -53,26 +53,38 @@
     </nav>
     </header>
     <main class="main_content">
-        <div class="login_form">
-            <img src="https://i.pinimg.com/736x/8c/7a/0d/8c7a0d52ca4dbca6559f1926d083de00.jpg" alt="login_img" class="login_img">
-            <p class="login_motivation">GIVING IS THE GREATEST ACT OF GRACE.</p>
-            <h1 class="h1_login">Login</h1>
+    <div class="signup_form">
+        <img src="https://i.pinimg.com/736x/8c/7a/0d/8c7a0d52ca4dbca6559f1926d083de00.jpg" alt="sign_img" class="signup_img">
+        <p class="signup_p">Create your account</p>
+        <p class="signup_motivation">Exchange a book Do a good deed</p>
+        
+        <!-- Додав цей div для правої частини -->
+        <div class="signup_form_content">
+            <h1 class="h1_signup">Sign Up</h1>
             <form action="https://httpbin.org/post" method="post">
-                <input type="email" placeholder="Email" class="login_email_input" id="email" name="email">
-                <input type="password" placeholder="Password" class="login_password_input" id="password" name="password">
-                <a href="mailto:bookexchange@gmail.ua" class="login_forget_link">Forget password ?</a>
-                <a href="/main.html">
-                <button class="login_button" type="submit" >Login</button>
-            </a>
+                <input type="text" placeholder="Name" class="signup_name_input" id="name" name="name">
+                <input type="text" placeholder="Surname" class="signup_surname_input" id="surname" name="surname">
+                <input type="date" placeholder="Date of Birth" class="signup_date_input" id="date of birth" name="date of birth">
+                <input type="email" placeholder="Email" class="signup_email_input" id="email" name="email">
+                <input type="password" placeholder="Password" class="signup_password_input" id="password" name="password">
+                
+                <button class="signup_button" type="submit">Signup</button>
             </form>
-            <p class="login_signup_link">Not a member ? <a href="/signup_page.html" style="color: #5a699f;">Sing up</a></p>
-
+            <p class="or_on_signup">or</p>
+            <div class="google_signup_container">
+                <a href="https://myaccount.google.com" class="google_signup_link">
+                <button class="google_signup_button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="google_logo" class="google_logo">
+                Continue with Google
+                </button>
+    </a>
+</div>
         </div>
+    </div>
     </main>
     <footer>
         <p>Support service: <a href="mailto:bookexchange@gmail.ua" class="footer_link">bookexchange@gmail.ua</a></p>
         <p>Book Exchange 2025</p>
     </footer>
-</script>
 </body>
 </html>

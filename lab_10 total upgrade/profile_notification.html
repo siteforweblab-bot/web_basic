@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Exchange</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="/logo/logo.png">
+    <link rel="stylesheet" href="/CSS/style_profile_notification.css">
+</head>
+<body>
+   <header class="header_on_profile">
+        <a href="/main.html"><img src="/logo/logo.png" alt="logo" class="logo_img"></a>
+        <a href="/profile.html" class="header_a_profile">Profile</a>
+        <a href="/profile_security.html" class="header_a_security">Security</a>
+        <a href="/profile_notification.html" class="header_a_notification">Notification</a>
+    </header>
+    
+    <main class="main_content">
+        <!-- Ліва панель -->
+        <div class="left_panel">
+            <img src="/logo/nickname.png" alt="account_logo" class="account_logo">
+            <div class="setting_on_panel">
+                <img src="/logo/setting.png" alt="settings icon">
+                <a href="/profile.html">Settings</a>
+            </div>
+            <div class="announcement_on_panel">
+                <img src="/logo/announcement.png" alt="announcement icon">
+                <a href="/announcement.html">Announcement</a>
+            </div>
+            <div class="orders_on_panel">
+                <img src="/logo/orders.png" alt="orders icon">
+                <a href="/orders.html">Orders</a>
+            </div>
+        </div>
+        
+        <!-- Картка для налаштувань сповіщень -->
+        <div class="card_notification">
+            <h1 class="h1_notification">Notification</h1>
+            <div class="notification_options">
+                <div class="notification_option">
+                    <span class="notification_text">Get notified about a new order</span>
+                    <input type="checkbox" class="notification_checkbox" id="order_notification">
+                </div>
+                <div class="notification_option">
+                    <span class="notification_text">Get notified about a new fundraiser</span>
+                    <input type="checkbox" class="notification_checkbox" id="fundraiser_notification">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Support service: <a href="mailto:bookexchange@gmail.ua" class="footer_link">bookexchange@gmail.ua</a></p>
+        <p>Book Exchange 2025</p>
+    </footer>
+</body>
+</html>
